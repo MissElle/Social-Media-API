@@ -1,8 +1,8 @@
 window.onload = function(){
     var feed = new Instafeed({
-        get: 'tagged',
+        get: '',
         tagName: '',
-        clientId: 'boobitters'
+        clientId: '	917566a744474d8a93a311662aa5be2f'
     });
     feed.run();
 }
