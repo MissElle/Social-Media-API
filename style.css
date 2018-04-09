@@ -1,0 +1,163 @@
+* {box-sizing: border-box; margin: 0; padding: 0;}
+
+html{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+header#site-header{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  min-height: 100vh;
+  width: 15em;
+  padding: 1em;
+}
+
+div#header-placeholder{
+  background-color: #8884ff;
+  height: 100%;
+  min-height: 100vh;
+  flex-basis: 15em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+main{
+  width: 100%;
+  transition: width .3s linear;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #04cca4;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+footer#site-footer{
+  position: fixed;
+  top:0;
+  right:0;
+  height: 100%;
+  min-height: 100vh;
+  width: 15em;
+  padding: 1em;
+}
+
+div#footer-placeholder{
+  background-color: #ff83de;
+  height: 100%;
+  min-height: 100vh;
+  flex-basis: 15em;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+article.content{
+  margin: 0 auto;
+  width: 80%;
+  background-color: #ffdb83;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+article.content>p{
+  padding: .5em 0;
+}
+
+/*The following classes defines the shape and flex behaviors of the header and footer, the div being necesary to prevent overlay issues*/
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1085ce+0,10c8ce+100 */
+div.header-footer-container{
+  padding: 2em 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+div.header-footer-container *{ /*This forces all content to be centered in the header and footer. These styles will change individually from here*/
+  width: 80%; 
+  text-align: center; 
+  margin: 0 auto;
+}
+header#site-header>div.header-footer-container{
+  border-radius: 5em 0 0 5em;
+  background: #1085ce; /* Old browsers */
+  background: -moz-linear-gradient(top, #1085ce 0%, #10c8ce 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #1085ce 0%,#10c8ce 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #1085ce 0%,#10c8ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1085ce', endColorstr='#10c8ce',GradientType=0 ); /* IE6-9 */
+}
+footer#site-footer>div.header-footer-container{
+  border-radius: 0 5em 5em 0;
+  background: #1085ce; /* Old browsers */
+  background: -moz-linear-gradient(top, #1085ce 0%, #10c8ce 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #1085ce 0%,#10c8ce 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #1085ce 0%,#10c8ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1085ce', endColorstr='#10c8ce',GradientType=0 ); /* IE6-9 */
+}
+
+figure>img{border-radius:50%;}
+
+@media screen and (max-width: 75.625em){
+  footer#site-footer{
+    position: relative;
+    left: 15em;
+    background-color: #ff83de;
+    height: 4em;
+    min-height: 0;
+    width: 100%;
+  }
+
+  div#footer-placeholder{
+    background-color: #000000;
+    height: 0;
+    width: 0;
+    flex-basis: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  
+  main{
+    min-height: 0;
+  }
+}
+
+@media screen and (max-width: 53.125em){
+  div#header-placeholder{
+    background-color: #000000;
+    height: 0;
+    width: 0;
+    flex-basis: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  header#site-header{
+    position: relative;
+    width: 100%;
+    min-height: 0;
+    height: 15em;
+  }
+  footer#site-footer{
+    left: 0;
+  }
+}
