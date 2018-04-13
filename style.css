@@ -167,4 +167,24 @@ div#instafeed{
   }
 }
 
-/*This is a comment to test a git push*/
+/*instagram feed css*/
+
+#instafeed {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 50%;
+  background: white;
+}  
+    
+#instafeed>img {
+  display: block;
+  width: 100%;
+}

@@ -68,11 +68,27 @@
         </main>
         <div id="footer-placeholder"></div> <!--This keeps the flexible container in place while the fixed header and footer stay locked on the page-->
       </div>
-      
+      <a href="https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code">obtain access Token</a>
       <footer id="site-footer">
         <div class="header-footer-container">
           <h2>Where am I now?</h2>
           <section>
+            <div id="instafeed"></div>
+            <script src="instafeed.min.js"></script>
+            <script type="text/javascript">
+              var userFeed = new Instafeed({
+                get: 'user',
+                userId: 'boobitters',
+                clientId: '917566a744474d8a93a311662aa5be2f',
+                accessToken: '623597756.02b47e1.3dbf3cb6dc3f4dccbc5b1b5ae8c74a72',
+                resolution: 'standard_resolution',
+                template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
+                sortBy: 'most-recent',
+                limit: 4,
+                links: false
+              });
+              userFeed.run();
+            </script>
           </section>
           <section>
           
