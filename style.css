@@ -125,10 +125,9 @@ figure>img{border-radius:50%;}
 @media screen and (max-width: 75.625em){
   footer#site-footer{
     position: relative;
-    left: 15em;
+    left: 17em;
     background-color: #ff83de;
-    height: 4em;
-    min-height: 0;
+    min-height: 4em;
     width: 100%;
   }
 
@@ -141,8 +140,21 @@ figure>img{border-radius:50%;}
     flex-shrink: 0;
   }
   
-  main{
-    min-height: 0;
+  main{min-height: 0;}
+  
+  footer#site-footer>div.header-footer-container{
+    padding: 2em 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer#site-footer>div.header-footer-container>section { 
+    width: 80%; 
+    text-align: center; 
+    margin: 0 auto;
   }
 }
 
@@ -168,9 +180,9 @@ figure>img{border-radius:50%;}
 
 /*Social Media Streams feed css*/
 
-.header-footer-container>section {
+footer#site-footer>.header-footer-container>section {
   overflow: hidden;
-  height: 10em;
+  max-height: 10em;
   border-radius: .7em;
   padding: .7em 0;
 }
@@ -191,6 +203,17 @@ iframe {
   border-radius: .7em;
 }
 
+div.fb-page>span>iframe{
+  width: 100%;
+}
+
+@media screen and (max-width: 75.625em){
+  footer#site-footer>.header-footer-container>section {
+    padding: 0 .7em;
+  }
+  
+
+}
 /*
 a {
   display: flex;
