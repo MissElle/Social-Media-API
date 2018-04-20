@@ -88,14 +88,49 @@
                 links: false
               });
               userFeed.run();
+              player.volume=0;
             </script>
           </section>
-            <a class="twitter-timeline" href="https://twitter.com/boobitters?ref_src=twsrc%5Etfw">Tweets by boobitters</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           <section>
-          
+<!--
+            <div id="twitch-embed"></div>
+              <script src="https://embed.twitch.tv/embed/v1.js"></script>
+              <script type="text/javascript">
+                var player = new Twitch.Embed("twitch-embed", {
+                  width: '100%',
+                  height: '100%',
+                  channel: 'booellean',
+                  allowfullscreen: true,
+                  layout: 'video',
+                  muted: true,
+                  autoplay: false
+                });
+                player.setMuted(true);
+              </script>
+-->
+            <iframe
+              id="twitch-embed"
+              src="https://player.twitch.tv/?channel=booellean&muted=true"
+              frameborder="0"
+              scrolling="no"
+              allowfullscreen="true"
+              >
+            </iframe>
+          </section>
+          <section>
+            <a class="twitter-timeline" href="https://twitter.com/boobitters?ref_src=twsrc%5Etfw">Tweets by boobitters</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </section>
         </div>
       </footer>
+<!--
+        <script type="text/javascript">
+          window.onload = function(){
+            document.querySelectorAll('iframe').forEach(function(el){
+              el.volume = 0;
+            });
+          }
+        </script>
+-->
 		<script src="script.js"></script>
 	</body>
 	

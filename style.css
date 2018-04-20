@@ -6,7 +6,7 @@ html{
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
@@ -20,13 +20,17 @@ body {
   flex-flow: row nowrap;
 }
 
+img {
+  max-width: 100%;
+}
+
 header#site-header{
   position: fixed;
   top:0;
   left:0;
   height: 100%;
   min-height: 100vh;
-  width: 15em;
+  width: 18em;
   padding: 1em;
 }
 
@@ -34,7 +38,7 @@ div#header-placeholder{
   background-color: #8884ff;
   height: 100%;
   min-height: 100vh;
-  flex-basis: 15em;
+  flex-basis: 18em;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -58,7 +62,7 @@ footer#site-footer{
   right:0;
   height: 100%;
   min-height: 100vh;
-  width: 15em;
+  width: 18em;
   padding: 1em;
 }
 
@@ -66,14 +70,14 @@ div#footer-placeholder{
   background-color: #ff83de;
   height: 100%;
   min-height: 100vh;
-  flex-basis: 15em;
+  flex-basis: 18em;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
 article.content{
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   background-color: #ffdb83;
   padding: 1em;
   margin: 1em 0;
@@ -94,7 +98,7 @@ div.header-footer-container{
   justify-content: space-between;
   align-items: center;
 }
-div.header-footer-container *{ /*This forces all content to be centered in the header and footer. These styles will change individually from here*/
+div.header-footer-container>section { 
   width: 80%; 
   text-align: center; 
   margin: 0 auto;
@@ -162,7 +166,13 @@ figure>img{border-radius:50%;}
   }
 }
 
-/*instagram feed css*/
+/*Social Media Streams feed css*/
+
+.header-footer-container>section {
+  overflow: hidden;
+  height: 10em;
+  border-radius: .7em
+}
 
 #instafeed {
   width: 100%;
@@ -172,10 +182,12 @@ figure>img{border-radius:50%;}
   width: 100%;
   min-width: 10em;
   height: 100%;
-  min-height: 15em;
   background-color: #42f4b0;
 }
 
+iframe {width: 100%; height: 100%}
+
+/*
 a {
   display: flex;
   align-items: center;
@@ -183,8 +195,31 @@ a {
   width: 50%;
   background: white;
 }  
+*/
     
+/*
 #instafeed>img {
   display: block;
   width: 100%;
 }
+
+#twitter-widget-0{
+  display: block;
+  height: 100%;
+}
+
+#twitch-embed{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+*/
+
+/*
+iframe#twitter-widget-0>html.SandboxRoot, iframe#twitter-widget-0>html.SandboxRoot>body, .timeline-Widget, .timeline-Header, .timeline-InformationCircle, .timeline-Header-title, .timeline-Body, .timeline-Viewport, .timeline-TweetList, .timeline-LoadMore {
+  width: 100%;
+}
+*/
+
+/* classes and IDs for Twitch embed
+.player, .player-video, .player-ui, #default-player, .player-root, .pl-background-banner, .pl-background-banner--offline, .pl-overlay, .pl-overlay__fullscreen, 
