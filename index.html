@@ -9,7 +9,16 @@
 	</head>
 	
 	<body>
-		
+      <!-- This is a mock code for a facebook embed. Go to https://developers.facebook.com/docs/plugins/page-plugin/ and copy step one, paste it here -->
+		<div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+      
       <header id="site-header">
         <div class="header-footer-container">
           <section id="author-content">
@@ -73,6 +82,7 @@
         <div class="header-footer-container">
           <h2>Where am I now?</h2>
           <section>
+            <!--This div will show the most recent instagram posts for your page IF your page has the same username as your tumblr. If it does not, replace the {Title} block with your page name. HOWEVER, this also requires you to replace the userID, clientID, and accessToken, which must be acquired through Instagram Developer Tools. Learn more here  https://www.instagram.com/developer/ -->
             <div id="instafeed"></div>
             <script src="instafeed.min.js"></script>
             <script type="text/javascript">
@@ -92,6 +102,7 @@
             </script>
           </section>
           <section>
+            <!--This iframe will stream current content from your twitch channel IF your channel has the same username as your tumblr. If it does not, replace the {Title} block with your channel name -->
 <!--
             <div id="twitch-embed"></div>
               <script src="https://embed.twitch.tv/embed/v1.js"></script>
@@ -118,19 +129,19 @@
             </iframe>
           </section>
           <section>
+            <!--This iframe will show the most recent twitter posts for your page IF your page has the same username as your tumblr. If it does not, replace the {Title} block with your page name -->
             <a class="twitter-timeline" href="https://twitter.com/boobitters?ref_src=twsrc%5Etfw">Tweets by boobitters</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </section>
+          <section>
+            <!--This iframe will show the most recent youtube video for your channel IF your channel has the same username as your tumblr. If it does not, replace the {Title} block with your channel name -->
+            <iframe src="http://www.youtube.com/embed?max-results=1&controls=0&showinfo=0&rel=0&listType=user_uploads&list=GameGrumps" frameborder="0" allowfullscreen></iframe>
+          </section>
+          <section>
+            <!-- This is a mock code for a facebook embed. Go to https://developers.facebook.com/docs/plugins/page-plugin/ and copy step two, paste it here -->
+            <div class="fb-page" data-href="https://www.facebook.com/thevulpeventure/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/thevulpeventure/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/thevulpeventure/">Victoria Vulpe</a></blockquote></div>
           </section>
         </div>
       </footer>
-<!--
-        <script type="text/javascript">
-          window.onload = function(){
-            document.querySelectorAll('iframe').forEach(function(el){
-              el.volume = 0;
-            });
-          }
-        </script>
--->
 		<script src="script.js"></script>
 	</body>
 	
