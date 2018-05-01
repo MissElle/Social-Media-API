@@ -87,7 +87,6 @@ article.content{
   margin: 0 auto;
   width: 90%;
   background-color: #ffdb83;
-  padding: 1.3em;
   margin: 1em 0;
   background-color: rgba(0, 0, 5, .8);
   box-shadow: .1em -.2em .8em .25em rgba(170, 170, 170, .6) inset;
@@ -95,10 +94,22 @@ article.content{
 }
 
 article.content>p{
-  padding: .5em 0;
+  padding: .5em 1em;
   color: #C5F4A6;
-  font-family: 'Press Start 2P', cursive;
-  font-size: .8em
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+  font-size: 1.2em;
+  line-height: 1.3em;
+}
+article.content>p:last-of-type{
+  padding: .5em 1em 1em 1em;
+}
+
+article.content>h1{
+  width: 100%;
+  background-color: rgba(253, 253, 253, 1);
+  padding: .5em 1em;
+  font-size: 1.8em;
+  font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
 }
 
 /*The following classes defines the shape and flex behaviors of the header and footer, the div being necesary to prevent overlay issues*/
@@ -112,9 +123,9 @@ div.header-footer-container{
   justify-content: space-between;
   align-items: center;
 }
-div.header-footer-container>section { 
-  width: 80%; 
-  text-align: center; 
+div.header-footer-container>section {
+  width: 80%;
+  text-align: center;
   margin: 0 auto;
 }
 header#site-header>div.header-footer-container{
@@ -153,9 +164,9 @@ figure>img{border-radius:50%;}
     flex-grow: 0;
     flex-shrink: 0;
   }
-  
+
   main{min-height: 0;}
-  
+
   footer#site-footer>div.header-footer-container{
     padding: 2em 0;
     height: 100%;
@@ -165,9 +176,9 @@ figure>img{border-radius:50%;}
     justify-content: space-between;
     align-items: center;
   }
-  footer#site-footer>div.header-footer-container>section { 
-    width: 80%; 
-    text-align: center; 
+  footer#site-footer>div.header-footer-container>section {
+    width: 80%;
+    text-align: center;
     margin: 0 auto;
   }
 }
@@ -212,7 +223,7 @@ footer#site-footer>.header-footer-container>section {
 }
 
 iframe {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   border-radius: .7em;
 }
@@ -225,7 +236,7 @@ div.fb-page>span>iframe{
   footer#site-footer>.header-footer-container>section {
     padding: 0 .7em;
   }
-  
+
 
 }
 /*
@@ -235,9 +246,9 @@ a {
   position: relative;
   width: 50%;
   background: white;
-}  
+}
 */
-    
+
 /*
 #instafeed>img {
   display: block;
@@ -263,6 +274,6 @@ iframe#twitter-widget-0>html.SandboxRoot, iframe#twitter-widget-0>html.SandboxRo
 */
 
 /* classes and IDs for Twitch embed
-.player, .player-video, .player-ui, #default-player, .player-root, .pl-background-banner, .pl-background-banner--offline, .pl-overlay, .pl-overlay__fullscreen, 
+.player, .player-video, .player-ui, #default-player, .player-root, .pl-background-banner, .pl-background-banner--offline, .pl-overlay, .pl-overlay__fullscreen,
 
 /*test comment for pushing*/
